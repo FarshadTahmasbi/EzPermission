@@ -1,0 +1,10 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.androidisland.tmb">
+
+    <application>
+        <activity
+            android:name=".permission.RuntimePermissionActivity"
+            android:theme="@style/TmbTheme.Transparent" />
+    </application>
+
+</manifest>
