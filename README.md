@@ -3,6 +3,8 @@
 
 A tiny and easy to use kotlin library for managing android runtime permissions
 
+![](sample-gif.gif)
+
 ## Gradle setup
 
 Add JitPack repository to build.gradle root level
