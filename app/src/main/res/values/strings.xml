@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">My Dummy Sample</string>
+    <string name="app_name">Easy Permission Sample</string>
+    <string name="go_to_app_settings"><u>go to app settings</u></string>
+    <string name="msg_empty">No permission requested</string>
+    <string name="title_go_btn">Let\'s go!</string>
+    <string name="title_clear">reset</string>
+    <string name="title_choose_permissions">Select permissions to request</string>
+    <string name="title_req_btn">Request</string>
+    <string name="title_cancel_btn">Cancel</string>
 </resources>

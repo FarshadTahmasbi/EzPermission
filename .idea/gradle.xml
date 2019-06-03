@@ -9,7 +9,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/tmb" />
+            <option value="$PROJECT_DIR$/easypermission" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
