@@ -5,7 +5,7 @@ import android.os.Handler
 import android.os.Looper
 import android.os.ResultReceiver
 
-internal class PermissionResult(private val listener: (List<String>, List<String>, List<String>) -> Unit) :
+internal class PermissionResult(private val listener: (Set<String>, Set<String>, Set<String>) -> Unit) :
     ResultReceiver(Handler(Looper.getMainLooper())) {
 
     companion object {
@@ -27,6 +27,6 @@ internal class PermissionResult(private val listener: (List<String>, List<String
             denied = getStringArrayList(EXTRA_DENIED_PERMISSIONS) ?: ArrayList()
             permanentlyDenied = getStringArrayList(EXTRA_PERMANENTLY_DENIED_PERMISSIONS) ?: ArrayList()
         }
-        listener.invoke(granted, denied, permanentlyDenied)
+        listener.invoke(granted.toSet(), denied.toSet(), permanentlyDenied.toSet())
     }
 }

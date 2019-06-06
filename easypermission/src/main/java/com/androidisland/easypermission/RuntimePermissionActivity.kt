@@ -11,11 +11,16 @@ internal class RuntimePermissionActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        ActivityCompat.requestPermissions(
-            this,
-            getRequestedPermissions(),
-            PermissionResult.CODE_PERMISSION
-        )
+        val notGranted = getNotGrantedPermissions()
+        if (notGranted.isNotEmpty()) {
+            ActivityCompat.requestPermissions(
+                this,
+                getNotGrantedPermissions(),
+                PermissionResult.CODE_PERMISSION
+            )
+        } else {
+            sendResult(ArrayList(getGrantedPermissions().toList()), ArrayList(), ArrayList())
+        }
     }
 
     private fun sendResult(
@@ -33,16 +38,26 @@ internal class RuntimePermissionActivity : AppCompatActivity() {
                 PermissionResult.EXTRA_PERMANENTLY_DENIED_PERMISSIONS to permanentlyDenied
             )
         )
+        finish()
     }
 
     private fun getRequestedPermissions() =
         intent.getStringArrayExtra(PermissionResult.EXTRA_REQUESTED_PERMISSIONS)
 
-    private fun getNotGrantedRequests() =
-        getRequestedPermissions().filter { !EasyPermission.isGranted(
-            this,
-            it
-        )
+    private fun getGrantedPermissions() =
+        getRequestedPermissions().filter {
+            EasyPermission.isGranted(
+                this,
+                it
+            )
+        }.toTypedArray()
+
+    private fun getNotGrantedPermissions() =
+        getRequestedPermissions().filter {
+            !EasyPermission.isGranted(
+                this,
+                it
+            )
         }.toTypedArray()
 
 
@@ -53,6 +68,7 @@ internal class RuntimePermissionActivity : AppCompatActivity() {
     ) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         val granted = ArrayList<String>()
+        granted.addAll(getGrantedPermissions())
         val denied = ArrayList<String>()
         val permanentlyDenied = ArrayList<String>()
         permissions.forEachIndexed { index, permission ->
@@ -67,6 +83,5 @@ internal class RuntimePermissionActivity : AppCompatActivity() {
             }
         }
         sendResult(granted, denied, permanentlyDenied)
-        finish()
     }
 }

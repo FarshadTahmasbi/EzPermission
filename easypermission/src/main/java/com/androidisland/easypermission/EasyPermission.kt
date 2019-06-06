@@ -81,9 +81,9 @@ class EasyPermission {
 
         fun request(
             listener: (
-                granted: List<String>,
-                denied: List<String>,
-                permanentlyDenied: List<String>
+                granted: Set<String>,
+                denied: Set<String>,
+                permanentlyDenied: Set<String>
             ) -> Unit
         ) {
             val intent = Intent(context, RuntimePermissionActivity::class.java)
