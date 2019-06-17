@@ -23,7 +23,7 @@ Then add this to build.gradle in app module
 
 ## How to use
 
-    EasyPermission.with(this)
+    EasyPermission.with(context)
         .permissions(
             Manifest.permission.WRITE_EXTERNAL_STORAGE,
             Manifest.permission.ACCESS_FINE_LOCATION
