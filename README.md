@@ -7,7 +7,7 @@ A tiny and easy to use kotlin library for managing android runtime permissions
 
 ## Gradle setup
 
-Add JitPack repository to build.gradle root level
+Add maven repository to build.gradle root level
 
 	allprojects {
 		repositories {
