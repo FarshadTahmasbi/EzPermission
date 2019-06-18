@@ -1,5 +1,5 @@
 # EasyPermission
-[![](https://jitpack.io/v/farshadtahmasbi/easypermission.svg)](https://jitpack.io/#farshadtahmasbi/easypermission)
+ [ ![Download](https://api.bintray.com/packages/androidisland/EasyPermission/easypermission/images/download.svg?version=0.1.3) ](https://bintray.com/androidisland/EasyPermission/easypermission/0.1.3/link)
 
 A tiny and easy to use kotlin library for managing android runtime permissions
 
@@ -11,14 +11,14 @@ Add JitPack repository to build.gradle root level
 
 	allprojects {
 		repositories {
-			maven { url 'https://jitpack.io' }
+			maven { url  "https://androidisland.bintray.com/EasyPermission" }
 		}
 	}
   
 Then add this to build.gradle in app module
   
   	dependencies {
-	        implementation 'com.github.farshadtahmasbi:easypermission:0.1.1'
+	        implementation 'com.androidisland.easypermission:easypermission:0.1.3'
 	}
 
 ## How to use
