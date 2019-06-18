@@ -86,17 +86,24 @@ class EasyPermission {
                 permanentlyDenied: Set<String>
             ) -> Unit
         ) {
-            val intent = Intent(context, RuntimePermissionActivity::class.java)
-                .addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
-                .putExtras(
-                    bundleOf(
-                        PermissionResult.EXTRA_REQUESTED_PERMISSIONS to permissions.distinct().toTypedArray(),
-                        PermissionResult.EXTRA_RESULT_RECEIVER to PermissionResult(
-                            listener
+            if (permissions.none { permission ->
+                    !isGranted(context, permission)
+                }) {
+                //Already have all permissions, no need to start activity
+                listener.invoke(permissions.toSet(), setOf(), setOf())
+            } else {
+                val intent = Intent(context, RuntimePermissionActivity::class.java)
+                    .addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
+                    .putExtras(
+                        bundleOf(
+                            PermissionResult.EXTRA_REQUESTED_PERMISSIONS to permissions.distinct().toTypedArray(),
+                            PermissionResult.EXTRA_RESULT_RECEIVER to PermissionResult(
+                                listener
+                            )
                         )
                     )
-                )
-            context.startActivity(intent)
+                context.startActivity(intent)
+            }
         }
     }
 }
