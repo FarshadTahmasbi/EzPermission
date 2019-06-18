@@ -24,7 +24,7 @@ Then add this to build.gradle in app module
 ## How to use
 
 It's simple, pass all permissions you want to ask for,
-the result will be divided to: granted, denied and permanently denied!
+the result will be divided into: granted, denied and permanently denied!
 
     EasyPermission.with(context)
         .permissions(
