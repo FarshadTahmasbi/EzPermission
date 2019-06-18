@@ -18,12 +18,12 @@ Add JitPack repository to build.gradle root level
 Then add this to build.gradle in app module
   
   	dependencies {
-	        implementation 'com.github.farshadtahmasbi:easypermission:0.1.0'
+	        implementation 'com.github.farshadtahmasbi:easypermission:0.1.1'
 	}
 
 ## How to use
 
-    EasyPermission.with(this)
+    EasyPermission.with(context)
         .permissions(
             Manifest.permission.WRITE_EXTERNAL_STORAGE,
             Manifest.permission.ACCESS_FINE_LOCATION
