@@ -85,7 +85,7 @@ class SampleActivity : AppCompatActivity() {
                 else permissionList -= permissions[which]
             }
             .setTitle(R.string.title_choose_permissions)
-            .setPositiveButton(R.string.title_req_btn) { _, i ->
+            .setPositiveButton(R.string.title_req_btn) { _, _ ->
                 askPermissions(permissionList)
             }
             .setNegativeButton(R.string.title_cancel_btn, null)

@@ -30,7 +30,7 @@ internal class RuntimePermissionActivity : AppCompatActivity() {
     ) {
         val resultReceiver =
             intent.getParcelableExtra<ResultReceiver>(PermissionResult.EXTRA_RESULT_RECEIVER)
-        resultReceiver.send(
+        resultReceiver?.send(
             PermissionResult.CODE_PERMISSION,
             bundleOf(
                 PermissionResult.EXTRA_GRANTED_PERMISSIONS to granted,
