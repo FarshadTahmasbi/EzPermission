@@ -1,0 +1,10 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.androidisland.ezpermission">
+
+    <application>
+        <activity
+            android:name="com.androidisland.ezpermission.EzPermissionActivity"
+            android:theme="@style/EzPermissionTheme.Transparent" />
+    </application>
+
+</manifest>

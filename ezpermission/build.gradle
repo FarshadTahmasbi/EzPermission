@@ -1,0 +1,60 @@
+apply plugin: 'com.novoda.bintray-release'
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
+
+def _versionName = '0.1.3'
+def _versionCode = 2
+def _groupId = 'com.androidisland.ezpermission'
+def _artifactId = 'ezpermission'
+def _userOrg = 'androidisland'
+def _repoName = 'EzPermission'
+def _desc = 'A tiny and easy to use kotlin library for managing android runtime permissions'
+def _git = 'https://github.com/FarshadTahmasbi/EzPermission'
+
+publish {
+    userOrg = _userOrg
+    repoName = _repoName
+    groupId = _groupId
+    artifactId = _artifactId
+    publishVersion = _versionName
+    desc = _desc
+    website = _git
+}
+
+android {
+    compileSdkVersion 29
+
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 29
+        versionCode _versionCode
+        versionName _versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    
+    ext.kotlin_version = '1.3.21'
+    ext.material_version = '1.0.0'
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation "androidx.core:core-ktx:1.0.2"
+    implementation "com.google.android.material:material:$material_version"
+}

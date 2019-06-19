@@ -1,5 +1,5 @@
-# EasyPermission
- [ ![Download](https://api.bintray.com/packages/androidisland/EasyPermission/easypermission/images/download.svg?version=0.1.3) ](https://bintray.com/androidisland/EasyPermission/easypermission/0.1.3/link)
+# EzPermission
+ [ ![Download](https://api.bintray.com/packages/androidisland/EzPermission/ezpermission/images/download.svg?version=0.1.3) ](https://bintray.com/androidisland/EzPermission/ezpermission/0.1.3/link)
 
 A tiny and easy to use kotlin library for managing android runtime permissions
 
@@ -11,14 +11,14 @@ Add maven repository to build.gradle root level
 
 	allprojects {
 		repositories {
-			maven { url  "https://androidisland.bintray.com/EasyPermission" }
+			maven { url  "https://androidisland.bintray.com/EzPermission" }
 		}
 	}
   
 Then add this to build.gradle in app module
   
   	dependencies {
-	        implementation 'com.androidisland.easypermission:easypermission:0.1.3'
+	        implementation 'com.androidisland.ezpermission:easypermission:0.1.3'
 	}
 
 ## How to use
@@ -26,7 +26,7 @@ Then add this to build.gradle in app module
 It's simple, pass all permissions you want to ask for,
 the result will be divided into: granted, denied and permanently denied!
 
-    EasyPermission.with(context)
+    EzPermission.with(context)
         .permissions(
             Manifest.permission.WRITE_EXTERNAL_STORAGE,
             Manifest.permission.ACCESS_FINE_LOCATION
