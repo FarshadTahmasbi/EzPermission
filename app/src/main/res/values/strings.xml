@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Easy Permission Sample</string>
+    <string name="app_name">EzPermission Sample</string>
     <string name="go_to_app_settings"><u>go to app settings</u></string>
     <string name="msg_empty">No permission requested</string>
     <string name="title_go_btn">Let\'s go!</string>
