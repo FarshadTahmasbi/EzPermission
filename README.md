@@ -17,7 +17,7 @@ Add maven repository to build.gradle root level
 Then add this to build.gradle in app module
   
   	dependencies {
-	        implementation 'com.androidisland.ezpermission:ezpermission:0.1.3'
+	        implementation 'com.androidisland.ezpermission:ezpermission:0.1.4'
 	}
 
 ## How to use
