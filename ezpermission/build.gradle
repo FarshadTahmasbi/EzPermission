@@ -3,8 +3,8 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-android'
 
-def _versionName = '0.1.3'
-def _versionCode = 2
+def _versionName = '0.1.4'
+def _versionCode = 3
 def _groupId = 'com.androidisland.ezpermission'
 def _artifactId = 'ezpermission'
 def _userOrg = 'androidisland'
