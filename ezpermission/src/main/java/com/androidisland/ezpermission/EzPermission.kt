@@ -94,6 +94,7 @@ class EzPermission {
             } else {
                 val intent = Intent(context, EzPermissionActivity::class.java)
                     .addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
+                    .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                     .putExtras(
                         bundleOf(
                             EzResult.EXTRA_REQUESTED_PERMISSIONS to permissions.distinct().toTypedArray(),
