@@ -6,15 +6,7 @@ A tiny and easy to use kotlin library for managing android runtime permissions
 
 ## Gradle setup
 
-Add maven repository to build.gradle root level
-
-	allprojects {
-		repositories {
-			maven { url  "https://androidisland.bintray.com/EzPermission" }
-		}
-	}
-  
-Then add this to build.gradle in app module
+Make sure your project includes jcenter in its repositories and add this to build.gradle in app module
   
   	dependencies {
 	        implementation 'com.androidisland.ezpermission:ezpermission:0.1.4'
