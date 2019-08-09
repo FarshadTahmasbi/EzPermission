@@ -1,4 +1,4 @@
-# EzPermission [ ![Download](https://api.bintray.com/packages/androidisland/EzPermission/ezpermission/images/download.svg) ](https://bintray.com/androidisland/EzPermission/ezpermission/_latestVersion)
+# EzPermission [ ![Download](https://api.bintray.com/packages/farshad-tmb/EzPermission/ezpermission/images/download.svg) ](https://bintray.com/farshad-tmb/EzPermission/ezpermission/_latestVersion)
 
 A tiny and easy to use kotlin library for managing android runtime permissions
 
