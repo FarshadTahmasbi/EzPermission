@@ -25,6 +25,9 @@ the result will be divided into: granted, denied and permanently denied!
         .request { granted, denied, permanentlyDenied ->
             //Here you can check results...
         }
+
+### ⭐️ If you liked it support me with your stars!
+	
 ## License
 
     Copyright 2019 Farshad Tahmasbi
