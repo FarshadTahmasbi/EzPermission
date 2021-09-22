@@ -2,6 +2,14 @@
 
 A tiny and easy to use kotlin library for managing android runtime permissions
 
+---
+
+# NOTE:
+This library is no longer maintained, Android standard api does the magic:
+https://developer.android.com/training/permissions/requesting
+
+---
+
 ![](sample-gif.gif)
 
 ## Gradle setup
