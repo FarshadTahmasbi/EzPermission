@@ -1,4 +1,4 @@
-# EzPermission [ ![Download](https://api.bintray.com/packages/farshad-tmb/EzPermission/ezpermission/images/download.svg) ](https://bintray.com/farshad-tmb/EzPermission/ezpermission/_latestVersion)
+# EzPermission [ ![Download](https://jitpack.io/v/FarshadTahmasbi/EzPermission.svg) ](https://jitpack.io/#FarshadTahmasbi/EzPermission/0.1.4)
 
 A tiny and easy to use kotlin library for managing android runtime permissions
 
@@ -6,11 +6,21 @@ A tiny and easy to use kotlin library for managing android runtime permissions
 
 ## Gradle setup
 
-Make sure your project includes jcenter in its repositories and add this to build.gradle in app module
+Make sure you have jitpack repository in the project level build.gradle:
   
-  	dependencies {
-	        implementation 'com.androidisland.ezpermission:ezpermission:0.1.4'
+  	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
 	}
+
+Then add dependency to the module:
+
+	dependencies {
+	        implementation 'com.github.FarshadTahmasbi:EzPermission:0.1.4'
+	}
+
 
 ## How to use
 
